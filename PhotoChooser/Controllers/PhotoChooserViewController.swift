@@ -111,14 +111,14 @@ class PhotoChooserViewController: UIViewController {
     }
     
     @objc func handleDoubleTap(tap:UITapGestureRecognizer){
-            if selectedImageScrollView.zoomScale > selectedImageScrollView.minimumZoomScale {
-                selectedImageScrollView.setZoomScale(selectedImageScrollView.minimumZoomScale, animated: true)
-            } else {
-                let location = tap.location(in: selectedImage)
-                let rect = CGRect(x: location.x, y: location.y, width: 1, height: 1)
-                selectedImageScrollView.zoom(to: rect, animated: true)
-            }
+        if selectedImageScrollView.zoomScale > selectedImageScrollView.minimumZoomScale {
+            selectedImageScrollView.setZoomScale(selectedImageScrollView.minimumZoomScale, animated: true)
+        } else {
+            let location = tap.location(in: selectedImage)
+            let rect = CGRect(x: location.x, y: location.y, width: 1, height: 1)
+            selectedImageScrollView.zoom(to: rect, animated: true)
         }
+    }
     
     @objc func zoomButtonTapped() {
         isZoom = !isZoom
@@ -171,7 +171,7 @@ class PhotoChooserViewController: UIViewController {
     //MARK: - Constraint Methods
     private func selectedImageScrollViewAddAutoLayout() {
         selectedImageScrollView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         selectedImageScrollView.bottomAnchor.constraint(equalTo: collectionHeaderView.topAnchor).isActive = true
         selectedImageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         selectedImageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -198,7 +198,7 @@ class PhotoChooserViewController: UIViewController {
     
     private func selectedImageAddAutoLayout() {
         selectedImage.translatesAutoresizingMaskIntoConstraints = false
-
+        
         selectedImage.topAnchor.constraint(equalTo: selectedImageScrollView.topAnchor).isActive = true
         selectedImage.bottomAnchor.constraint(equalTo: selectedImageScrollView.bottomAnchor).isActive = true
         selectedImage.heightAnchor.constraint(equalTo: selectedImageScrollView.heightAnchor).isActive = true
