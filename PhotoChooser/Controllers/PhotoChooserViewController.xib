@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoChooserViewController" customModule="PhotoChooser" customModuleProvider="target">
+            <connections>
+                <outlet property="controlBarView" destination="yrW-EB-vag" id="6GC-OW-zhb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrW-EB-vag">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-bz-Haw">
+                            <rect key="frame" x="354" y="32" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="JJQ-LL-CDe"/>
+                                <constraint firstAttribute="width" constant="40" id="W2z-cX-tXX"/>
+                            </constraints>
+                            <state key="normal" image="DoneIcon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pi-Mt-nlp">
+                            <rect key="frame" x="20" y="32" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ggd-EO-ulz"/>
+                                <constraint firstAttribute="width" constant="40" id="klI-TH-sRY"/>
+                            </constraints>
+                            <state key="normal" image="CancelIcon"/>
+                            <connections>
+                                <action selector="dismissPhotoChooserViewController:" destination="-1" eventType="touchUpInside" id="eOf-o5-TpW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="1iy-Hw-Skf"/>
+                        <constraint firstAttribute="bottom" secondItem="IIC-bz-Haw" secondAttribute="bottom" constant="8" id="3r6-Mu-GAy"/>
+                        <constraint firstAttribute="trailing" secondItem="IIC-bz-Haw" secondAttribute="trailing" constant="20" id="BhH-xu-ruC"/>
+                        <constraint firstAttribute="bottom" secondItem="5pi-Mt-nlp" secondAttribute="bottom" constant="8" id="LaN-Da-9un"/>
+                        <constraint firstItem="5pi-Mt-nlp" firstAttribute="leading" secondItem="yrW-EB-vag" secondAttribute="leading" constant="20" id="PaC-wR-NsK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="yrW-EB-vag" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A0x-v6-ya0"/>
+                <constraint firstItem="yrW-EB-vag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TNE-Ja-Cfm"/>
+                <constraint firstItem="yrW-EB-vag" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="plB-mT-uoz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CancelIcon" width="50" height="50"/>
+        <image name="DoneIcon" width="50" height="50"/>
+    </resources>
+</document>
